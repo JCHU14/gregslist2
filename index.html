@@ -33,6 +33,8 @@
           <!-- NAVLINKS -->
           <a href="#/about" class="nav-link">About</a>
           <a href="#/cars" class="nav-link">Cars</a>
+          <a href="#/houses" class="nav-link">houses</a>
+
         </div>
       </div>
       <div class="flex-grow-1 justify-content-end align-items-center d-flex" id="authstate"></div>
@@ -45,7 +47,57 @@
 
     <section id="router-view">
       <!-- primary viewport -->
+      <div class="container-fluid">
+        <form onsubmit="app.HouseController.createHouse(event)">
 
+          <div class="mb-2 textarea">
+            <label for="imgUrl">Image</label>
+            <input id="imgUrl" type="url" required minlength="5" maxlength="100" name="imgUrl" placeholder="Image...">
+          </div>
+
+          <div class="mb-2 textarea">
+            <label for="year">Year</label>
+            <input id="year" type="number" required min="1900" max="2024" name="year" placeholder="Year...">
+          </div>
+
+          <div class="mb-2 textarea">
+            <label for="bathrooms">Bathrooms</label>
+            <input id="bathrooms" type="number" required minlength="1" maxlength="2" name="bathrooms"
+              placeholder="Bathrooms...">
+          </div>
+
+          <div class="mb-2 textarea">
+            <label for="bedrooms">Bedrooms</label>
+            <input id="bedrooms" type="number" required minlength="1" maxlength="2" name="bedrooms"
+              placeholder="Bedrooms...">
+          </div>
+
+          <div class="mb-2 textarea">
+            <label for="price">Price</label>
+            <input id="year" type="number" required minlength="4" maxlength="4" name="price" placeholder="Price...">
+          </div>
+
+          <div class="mb-2 textarea">
+            <label for="levels">Square Feet</label>
+            <input id="levels" type="number" required minlength="1" maxlength="5000" name="levels"
+              placeholder="levels...">
+          </div>
+
+          <div class="mb-2 textarea">
+            <label for="description">Description</label>
+            <input id="description" type="text" required minlength="0" maxlength="300" name="description"
+              placeholder="Description...">
+          </div>
+
+          <div>
+            <button class="btn btn-success" type="submit">Submit</button>
+          </div>
+
+        </form>
+
+        <div id="houses"></div>
+
+      </div>
     </section>
 
 
